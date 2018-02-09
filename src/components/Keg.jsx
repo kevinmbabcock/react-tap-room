@@ -7,7 +7,7 @@ function Keg(props){
   return (
     <div>
       <h6><strong>{props.name}</strong></h6>
-      <p>by {props.brand}</p>
+      <p><em>by {props.brand}</em></p>
       <ul>
         <li>{props.price}</li>
         <li>{props.abv} ABV</li>

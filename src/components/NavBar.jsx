@@ -6,7 +6,13 @@ function NavBar(){
 
   return (
     <div>
-      <Link to='/'>Home</Link> | <Link to='/view-kegs'>View Keg List</Link> | <Link to='/edit-kegs'>Edit Keg List</Link> 
+      <Link to='/'>Home</Link>
+      <br />
+      <br />
+      <Link to='/view-kegs'>View Keg List</Link>
+      <br />
+      <br />
+      <Link to='/edit-kegs'>Edit Keg List</Link>
     </div>
   );
 }

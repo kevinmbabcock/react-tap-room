@@ -59,7 +59,7 @@ function KegList(){
             <Route path='/edit-kegs' component={EditKegLink} />
             <Route path='/view-kegs' component={SellKegButtons} />
           </Switch>
-
+          <hr />
         </div>
       )}
     </div>

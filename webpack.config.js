@@ -33,6 +33,16 @@ module.exports = {
   module: {
     rules: [
       {
+      test: /\.(png|gif|jp(e*)g|svg|htm)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 8000,
+          name: 'images/[hash]-[name].[ext]'
+          }
+        }
+      },
+      {
         test: /\.jsx?$/,
         enforce: "pre",
         loader: "eslint-loader",
@@ -66,9 +76,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Tap Room',
+      title: 'Tap Room',
       filename: resolve(__dirname, "build", "index.html"),
-      style: 'rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"'
+      script: 'rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"'
     }),
   ]
 

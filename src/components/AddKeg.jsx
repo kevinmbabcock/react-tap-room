@@ -4,6 +4,7 @@ function AddKeg(){
 
   return (
     <div>
+      <h6>Fill out this form to add a new keg to the list</h6>
       <form>
         <input
           type='text'
