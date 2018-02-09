@@ -4,7 +4,7 @@ function AddKeg(){
 
   return (
     <div>
-      <p></p>
+      <p>Add keg</p>
     </div>
   );
 }

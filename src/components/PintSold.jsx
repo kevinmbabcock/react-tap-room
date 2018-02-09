@@ -4,7 +4,7 @@ function PintSold(){
 
   return (
     <div>
-      <p></p>
+      <p>Pint sold</p>
     </div>
   );
 }

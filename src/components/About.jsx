@@ -1,12 +1,12 @@
 import React from 'react';
 
-function ViewKegs(){
+function AddKeg(){
 
   return (
     <div>
-      <p>view kegs</p>
+      <p>About page</p>
     </div>
   );
 }
 
-export default ViewKegs;
+export default AddKeg;

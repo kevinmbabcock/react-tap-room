@@ -4,7 +4,7 @@ function EditKegList(){
 
   return (
     <div>
-      <p></p>
+      <p>Edit Keg List</p>
     </div>
   );
 }

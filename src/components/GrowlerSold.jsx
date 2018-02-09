@@ -4,7 +4,7 @@ function GrowlerSold(){
 
   return (
     <div>
-      <p></p>
+      <p>Growler Sold</p>
     </div>
   );
 }
