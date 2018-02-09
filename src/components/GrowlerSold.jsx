@@ -4,7 +4,7 @@ function GrowlerSold(){
 
   return (
     <div>
-      <p>Growler Sold</p>
+      <button class="btn">Growler</button>
     </div>
   );
 }

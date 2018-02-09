@@ -1,5 +1,8 @@
 import React from 'react';
 import Keg from './Keg';
+import PintSold from './PintSold';
+import GrowlerSold from './GrowlerSold';
+import LgGrowlerSold from './LgGrowlerSold';
 
 const availableKegs = [
   {
@@ -44,13 +47,18 @@ function KegList(){
   return (
     <div>
       {availableKegs.map((keg, index) =>
-        <Keg
-          name={keg.name}
-          brand={keg.brand}
-          price={keg.price}
-          abv={keg.abv}
-          pints={keg.pints}
-          key={index} />
+        <div>
+          <Keg
+            name={keg.name}
+            brand={keg.brand}
+            price={keg.price}
+            abv={keg.abv}
+            pints={keg.pints}
+            key={index} />
+          <PintSold />
+          <GrowlerSold />
+          <LgGrowlerSold />
+        </div>
       )}
     </div>
   );

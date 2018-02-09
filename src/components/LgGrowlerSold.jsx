@@ -4,7 +4,7 @@ function LgGrowlerSold(){
 
   return (
     <div>
-      <p>Large growler sold</p>
+      <button class="btn">Large Growler</button>
     </div>
   );
 }
