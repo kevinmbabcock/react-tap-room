@@ -1,8 +1,8 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Keg from './Keg';
-import PintSold from './PintSold';
-import GrowlerSold from './GrowlerSold';
-import LgGrowlerSold from './LgGrowlerSold';
+import EditKegLink from './EditKegLink';
+import SellKegButtons from './SellKegButtons';
 
 const availableKegs = [
   {
@@ -54,10 +54,12 @@ function KegList(){
             price={keg.price}
             abv={keg.abv}
             pints={keg.pints}
-            key={index} />
-          <PintSold />
-          <GrowlerSold />
-          <LgGrowlerSold />
+            key={index}/>
+          <Switch>
+            <Route path='/edit-kegs' component={EditKegLink} />
+            <Route path='/view-kegs' component={SellKegButtons} />
+          </Switch>
+
         </div>
       )}
     </div>

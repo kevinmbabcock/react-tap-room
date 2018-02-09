@@ -1,14 +1,14 @@
 import React from 'react';
 import KegList from './KegList';
 
-function ViewKegs(){
+function ViewKegList(){
 
   return (
     <div>
-      <p>Here are all the kegs we have available:</p>
+      <p>Beers on Tap:</p>
       <KegList />
     </div>
   );
 }
 
-export default ViewKegs;
+export default ViewKegList;
