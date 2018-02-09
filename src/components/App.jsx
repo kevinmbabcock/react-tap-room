@@ -16,7 +16,7 @@ function App(){
       <Switch>
         <Route exact path='/' component={About} />
         <Route path='/view-kegs' component={ViewKegs} />
-        <Route path='/edit-keg' component={EditKegList} />
+        <Route path='/edit-kegs' component={EditKegList} />
         <Route component={Error404} />
       </Switch>
     </div>
