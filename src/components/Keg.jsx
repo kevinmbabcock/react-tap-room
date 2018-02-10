@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 
 function Keg(props){
 
+  var localStyles = {
+    lineHeight: '6px'
+  };
+
   return (
-    <div>
-      <h6><strong>{props.name}</strong></h6>
-      <p><em>by {props.brand}</em></p>
-      <ul>
-        <li>{props.price}</li>
-        <li>{props.abv} ABV</li>
-      </ul>
+    <div style={localStyles}>
+      <h2><strong>{props.name}</strong></h2>
+      <h4><em>by {props.brand}</em></h4>
+      <p>{props.price}</p>
+      <p>{props.abv} ABV</p>
     </div>
   );
 }

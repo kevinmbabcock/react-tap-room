@@ -4,11 +4,23 @@ import AddKeg from './AddKeg';
 
 function EditKegList(){
 
+  var titleStyle = {
+    fontFamily: 'monospace',
+    fontSize: '40px',
+    color: '#660000'
+  };
+
   return (
     <div>
-      <p>Please select which keg you would like to edit:</p>
-      <KegList />
-      <AddKeg />
+      <div className="row">
+        <div className="col">
+          <p style={titleStyle}>Edit Keg:</p>
+          <KegList />
+        </div>
+        <div className="col">
+          <AddKeg />
+        </div>
+      </div>
     </div>
   );
 }

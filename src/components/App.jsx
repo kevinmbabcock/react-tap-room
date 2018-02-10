@@ -15,8 +15,11 @@ function App(){
     border: '5px solid grey',
     borderColor: '#262626',
     backgroundColor: '#bfbfbf',
-    margin: '10px'
-  }
+    marginTop: '0px',
+    marginBottom: 'auto',
+    padding: '10px',
+    textAlign: 'center'
+  };
 
   return (
     <div className="container">
@@ -27,12 +30,13 @@ function App(){
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
-          background-blend-mode: lighten;
         }
       `}</style>
       <Header />
+      <br />
+      <br />
       <div className="row">
-        <div className="col-sm-8" style={borderBox}>
+        <div className="col-sm-9" style={borderBox}>
           <Switch>
             <Route exact path='/' component={About} />
             <Route path='/view-kegs' component={ViewKegList} />
@@ -41,10 +45,9 @@ function App(){
             <Route component={Error404} />
           </Switch>
         </div>
-        <div className="col-sm-2">
-
+        <div className="col-sm-1">
         </div>
-        <div className="col-sm-2" styles={{float: 'right'}}>
+        <div className="col-sm-2" style={borderBox}>
           <NavBar />
         </div>
       </div>

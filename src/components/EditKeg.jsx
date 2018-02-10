@@ -2,30 +2,54 @@ import React from 'react';
 
 function EditKeg(){
 
+  var localStyle = {
+    marginTop: '80px',
+    lineHeight: '40px',
+    padding: '10px'
+  };
+
+  var titleStyle = {
+    fontFamily: 'monospace',
+    fontSize: '40px',
+    color: '#660000'
+  };
+
   return (
-    <div>
-      <form>
+    <div style={localStyle}>
+      <h6 style={titleStyle}>Edit Keg:</h6>
+      <form className='form-group'>
+        <label><strong>Name:</strong></label>
         <input
+          className='form-control'
           type='text'
           id='name'
-          placeholder="Manny's Pale Ale"/>
+          placeholder='Mannys Pale Ale'/>
+        <label><strong>Brand:</strong></label>
         <input
+          className='form-control'
           type='text'
           id='brand'
           placeholder='Georgetown Brewing Co.'/>
+        <label><strong>Price:</strong></label>
         <input
+          className='form-control'
           type='text'
           id='price'
           placeholder='$6.00'/>
+        <label><strong>Alcohol %:</strong></label>
         <input
+          className='form-control'
           type='text'
           id='abv'
           placeholder='5.4%'/>
+        <label><strong>Pints:</strong></label>
         <input
+          className='form-control'
           type='text'
           id='pints'
           placeholder='124'/>
-        <button type='submit'>Help!</button>
+        <br />
+        <button type='submit' className="btn btn-warning">Apply Changes</button>
       </form>
     </div>
   );

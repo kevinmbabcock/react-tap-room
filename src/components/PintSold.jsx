@@ -4,7 +4,7 @@ function PintSold(){
 
   return (
     <div>
-      <button className="btn">Pint</button>
+      <button className="btn btn-outline-primary">Pint</button>
     </div>
   );
 }

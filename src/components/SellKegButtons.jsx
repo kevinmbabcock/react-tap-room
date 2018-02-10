@@ -7,9 +7,17 @@ function SellKegButtons(){
 
   return (
     <div>
-      <PintSold />
-      <GrowlerSold />
-      <LgGrowlerSold />
+      <div className="row">
+        <div className="col">
+          <PintSold />
+        </div>
+        <div className="col">
+          <GrowlerSold />
+        </div>
+        <div className="col">
+          <LgGrowlerSold />
+        </div>
+      </div>
     </div>
   );
 }
