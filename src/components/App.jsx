@@ -5,7 +5,6 @@ import NavBar from './NavBar';
 import About from './About';
 import ViewKegList from './ViewKegList';
 import Admin from './Admin';
-import EditKeg from './EditKeg';
 import Error404 from './Error404';
 import BackgroundImage from '../assets/images/background-image.jpg';
 
@@ -25,7 +24,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       masterKegList: []
-    }
+    };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
 
@@ -54,8 +53,8 @@ class App extends React.Component {
           <div className="col-sm-9">
             <Switch>
               <Route exact path='/' render={()=><About />} />
-              <Route path='/view-kegs' render={()=><ViewKegList kegList={this.state.masterKegList} />} />
-              <Route path='/admin' render={()=><Admin kegList={this.state.masterKegList} onAddingNewKegToList={this.handleAddingNewKegToList}/>} />
+              <Route path='/view-kegs' render={(props)=><ViewKegList kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}/>} />
+              <Route path='/admin' render={(props)=><Admin currentRouterPath={props.location.pathname} kegList={this.state.masterKegList} onAddingNewKegToList={this.handleAddingNewKegToList}/>} />
               <Route component={Error404} />
             </Switch>
           </div>

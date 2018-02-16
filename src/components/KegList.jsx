@@ -1,8 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 import Keg from './Keg';
-import EditKeg from './EditKeg';
-import SellKegButtons from './SellKegButtons';
 import PropTypes from 'prop-types';
 
 // const availableKegs = [
@@ -55,11 +52,8 @@ function KegList(props){
             price={keg.price}
             abv={keg.abv}
             pints={keg.pints}
+            currentRouterPath={props.currentRouterPath}
             key={index}/>
-          <Switch>
-            <Route path='/admin' component={EditKeg} />
-            <Route path='/view-kegs' component={SellKegButtons} />
-          </Switch>
           <hr />
         </div>
       )}
@@ -68,7 +62,8 @@ function KegList(props){
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default KegList;

@@ -18,13 +18,14 @@ function ViewKegList(props){
   return (
     <div style={localStyles}>
       <p style={titleStyle}><strong>Beers on Tap:</strong></p>
-      <KegList kegList={props.kegList}/>
+      <KegList kegList={props.kegList} currentRouterPath={props.currentRouterPath}/>
     </div>
   );
 }
 
 ViewKegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default ViewKegList;

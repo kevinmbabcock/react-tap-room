@@ -15,8 +15,8 @@ function Admin(props){
     <div>
       <div className="row">
         <div className="col">
-          <p style={titleStyle}>Edit Keg:</p>
-          <KegList kegList={props.kegList}/>
+          <p style={titleStyle}>Edit Kegs:</p>
+          <KegList kegList={props.kegList} currentRouterPath={props.currentRouterPath}/>
         </div>
         <div className="col">
           <AddKeg onAddingNewKegToList={props.onAddingNewKegToList}/>
@@ -28,7 +28,8 @@ function Admin(props){
 
 Admin.propTypes = {
   kegList: PropTypes.array,
-  onAddingNewKegToList: PropTypes.func
+  onAddingNewKegToList: PropTypes.func,
+  currentRouterPath: PropTypes.string
 };
 
 export default Admin;

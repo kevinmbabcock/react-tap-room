@@ -56,7 +56,7 @@ function AddKeg(props){
           id='price'
           placeholder='Price'
           ref={(input) => {_price = input;}}/>
-        <label><strong>Alcohol %:</strong></label>
+        <label><strong>Alcohol % (ABV):</strong></label>
         <input
           className='form-control'
           type='text'
@@ -66,7 +66,7 @@ function AddKeg(props){
         <label><strong>Pints:</strong></label>
         <input
           className='form-control'
-          type='text'
+          type='number'
           id='pints'
           placeholder='Pints'
           ref={(input) => {_pints = input;}}/>
