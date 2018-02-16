@@ -1,5 +1,6 @@
 import React from 'react';
 import KegList from './KegList';
+import PropTypes from 'prop-types';
 
 function ViewKegList(props){
 
@@ -24,6 +25,6 @@ function ViewKegList(props){
 
 ViewKegList.propTypes = {
   kegList: PropTypes.array
-}
+};
 
 export default ViewKegList;

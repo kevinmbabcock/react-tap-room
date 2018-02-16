@@ -19,7 +19,7 @@ function Admin(props){
           <KegList kegList={props.kegList}/>
         </div>
         <div className="col">
-          <AddKeg />
+          <AddKeg onAddingNewKegToList={props.onAddingNewKegToList}/>
         </div>
       </div>
     </div>
@@ -27,7 +27,8 @@ function Admin(props){
 }
 
 Admin.propTypes = {
-  kegList: PropTypes.array
-}
+  kegList: PropTypes.array,
+  onAddingNewKegToList: PropTypes.func
+};
 
 export default Admin;
