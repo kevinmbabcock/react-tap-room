@@ -13,7 +13,7 @@ function NavBar(){
       <Link to='/view-kegs'>View Keg List</Link>
       <br />
       <br />
-      <Link to='/edit-kegs'>Edit Kegs</Link>
+      <Link to='/admin'>Edit Kegs</Link>
     </div>
   );
 }

@@ -4,12 +4,19 @@ import Header from './Header';
 import NavBar from './NavBar';
 import About from './About';
 import ViewKegList from './ViewKegList';
-import EditKegList from './EditKegList';
+import Admin from './Admin';
 import EditKeg from './EditKeg';
 import Error404 from './Error404';
 import BackgroundImage from '../assets/images/background-image.jpg';
 
-function App(){
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterKegList = []
+    }
+  }
 
   var borderBox = {
     border: '5px solid grey',
@@ -38,10 +45,9 @@ function App(){
       <div className="row">
         <div className="col-sm-9" style={borderBox}>
           <Switch>
-            <Route exact path='/' component={About} />
-            <Route path='/view-kegs' component={ViewKegList} />
-            <Route path='/edit-kegs' component={EditKegList} />
-            <Route path='/edit-keg/keg' component={EditKeg} />
+            <Route exact path='/' render={()=><About />} />
+            <Route path='/view-kegs' render={()=><ViewKegsList kegList={masterKegList} />
+            <Route path='/admin' render={()=><Admin kegList={masterKegList} />
             <Route component={Error404} />
           </Switch>
         </div>

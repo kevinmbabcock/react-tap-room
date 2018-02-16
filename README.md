@@ -10,11 +10,16 @@ This website allows users to see what beers are available on tap, as well as whe
 
 ## Photo
 
-#Week 1:
+# Week 1:
 ![Visualization](./component_tree.jpg)
 
-#Week 2:
+# Week 2:
 ![Visualization](./new_component_tree.jpg)
+
+Changes:
+* EditKegList has been renamed to Admin to more accurately describe its purpose
+* Edit Keg is now a child of KegList in the Admin route, instead of a child of App
+* EditKegLink component has been removed
 
 ## Notes
 
@@ -22,7 +27,7 @@ This website allows users to see what beers are available on tap, as well as whe
 * It seems odd that my EditKeg component is a child of my App component and not the EditKegList component, but I do not want to display the list of kegs in this view.
 * I originally tried to make the keg list a parent of ViewKegsList and EditKegsList, since both were using it, but I found it easier to make this a child component of both ViewKegList and EditKegList and render the appropriate buttons depending on the url path.
 
-##Known Bugs
+## Known Bugs
 
 * project is UI only, no back-end integration yet
 

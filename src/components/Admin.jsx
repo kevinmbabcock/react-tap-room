@@ -2,7 +2,7 @@ import React from 'react';
 import KegList from './KegList';
 import AddKeg from './AddKeg';
 
-function EditKegList(){
+function Admin(){
 
   var titleStyle = {
     fontFamily: 'monospace',
@@ -25,4 +25,4 @@ function EditKegList(){
   );
 }
 
-export default EditKegList;
+export default Admin;
