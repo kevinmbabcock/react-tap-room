@@ -10,8 +10,11 @@ This website allows users to see what beers are available on tap, as well as whe
 
 ## Photo
 
+#Week 1:
 ![Visualization](./component_tree.jpg)
-![Visualization](./new-component-tree.jpg)
+
+#Week 2:
+![Visualization](./new_component_tree.jpg)
 
 ## Notes
 
