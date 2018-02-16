@@ -1,8 +1,9 @@
 import React from 'react';
 import KegList from './KegList';
 import AddKeg from './AddKeg';
+import PropTypes from 'prop-types';
 
-function Admin(){
+function Admin(props){
 
   var titleStyle = {
     fontFamily: 'monospace',
@@ -15,7 +16,7 @@ function Admin(){
       <div className="row">
         <div className="col">
           <p style={titleStyle}>Edit Keg:</p>
-          <KegList />
+          <KegList kegList={props.kegList}/>
         </div>
         <div className="col">
           <AddKeg />
@@ -23,6 +24,10 @@ function Admin(){
       </div>
     </div>
   );
+}
+
+Admin.propTypes = {
+  kegList: PropTypes.array
 }
 
 export default Admin;

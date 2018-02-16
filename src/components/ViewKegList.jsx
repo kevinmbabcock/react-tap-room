@@ -1,7 +1,7 @@
 import React from 'react';
 import KegList from './KegList';
 
-function ViewKegList(){
+function ViewKegList(props){
 
   var localStyles = {
     margin: '0px',
@@ -17,9 +17,13 @@ function ViewKegList(){
   return (
     <div style={localStyles}>
       <p style={titleStyle}><strong>Beers on Tap:</strong></p>
-      <KegList />
+      <KegList kegList={props.kegList}/>
     </div>
   );
+}
+
+ViewKegList.propTypes = {
+  kegList: PropTypes.array
 }
 
 export default ViewKegList;
