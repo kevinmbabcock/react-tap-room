@@ -11,6 +11,7 @@ This website allows users to see what beers are available on tap, as well as whe
 ## Photo
 
 ![Visualization](./component_tree.jpg)
+![Visualization](./new-component-tree.jpg)
 
 ## Notes
 
