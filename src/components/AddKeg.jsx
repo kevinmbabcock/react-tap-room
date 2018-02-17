@@ -19,7 +19,7 @@ function AddKeg(props){
   let _brand = null;
   let _price = null;
   let _abv = null;
-  let _pints = null;
+  let _pints = 0;
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();

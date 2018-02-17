@@ -8,17 +8,17 @@ import Admin from './Admin';
 import Error404 from './Error404';
 import BackgroundImage from '../assets/images/background-image.jpg';
 
-class App extends React.Component {
+const borderBox = {
+  border: '5px solid grey',
+  borderColor: '#262626',
+  backgroundColor: '#bfbfbf',
+  marginTop: '0px',
+  marginBottom: 'auto',
+  padding: '10px',
+  textAlign: 'center'
+};
 
-  // const borderBox = {
-  //   border: '5px solid grey',
-  //   borderColor: '#262626',
-  //   backgroundColor: '#bfbfbf',
-  //   marginTop: '0px',
-  //   marginBottom: 'auto',
-  //   padding: '10px',
-  //   textAlign: 'center'
-  // };
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -50,7 +50,7 @@ class App extends React.Component {
         <br />
         <br />
         <div className="row">
-          <div className="col-sm-9">
+          <div className="col-sm-9" style={borderBox}>
             <Switch>
               <Route exact path='/' render={()=><About />} />
               <Route path='/view-kegs' render={(props)=><ViewKegList kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}/>} />
@@ -60,7 +60,7 @@ class App extends React.Component {
           </div>
           <div className="col-sm-1">
           </div>
-          <div className="col-sm-2">
+          <div className="col-sm-2" style={borderBox}>
             <NavBar />
           </div>
         </div>
