@@ -18,14 +18,17 @@ function ViewKegList(props){
   return (
     <div style={localStyles}>
       <p style={titleStyle}><strong>Beers on Tap:</strong></p>
-      <KegList kegList={props.kegList} currentRouterPath={props.currentRouterPath}/>
+      <KegList kegList={props.kegList} currentRouterPath={props.currentRouterPath} onPintSale={props.onPintSale} onGrowlerSale={props.onGrowlerSale} onLgGrowlerSale={props.onLgGrowlerSale} />
     </div>
   );
 }
 
 ViewKegList.propTypes = {
   kegList: PropTypes.array,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onPintSale: PropTypes.func,
+  onGrowlerSale: PropTypes.func,
+  onLgGrowlerSale: PropTypes.func
 };
 
 export default ViewKegList;

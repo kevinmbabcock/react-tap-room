@@ -23,15 +23,33 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: []
+      masterKegList: [],
+      selectedKeg = null
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
   }
 
   handleAddingNewKegToList(newKeg) {
     let newMasterKegList = this.state.masterKegList;
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
+  }
+
+  handleChangingSelectedKeg(kegId) {
+    this.setState(selectedKeg: kegId)
+  }
+
+  handlePintSale(keg) {
+    keg.pints = keg.pints -
+  }
+
+  handleGrowlerSale(keg) {
+    keg.pints = keg.pints -
+  }
+
+  handleLgGrowlerSale(keg) {
+    keg.pints = keg.pints -
   }
 
   render() {
@@ -53,8 +71,8 @@ class App extends React.Component {
           <div className="col-sm-9" style={borderBox}>
             <Switch>
               <Route exact path='/' render={()=><About />} />
-              <Route path='/view-kegs' render={(props)=><ViewKegList kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}/>} />
-              <Route path='/admin' render={(props)=><Admin currentRouterPath={props.location.pathname} kegList={this.state.masterKegList} onAddingNewKegToList={this.handleAddingNewKegToList}/>} />
+              <Route path='/view-kegs' render={(props)=><ViewKegList kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onPintSale={this.handlePintSale} onGrowlerSale={this.handleGrowlerSale} onLgGrowlerSale={this.handleLgGrowlerSale} />} />
+              <Route path='/admin' render={(props)=><Admin currentRouterPath={props.location.pathname} kegList={this.state.masterKegList} onAddingNewKegToList={this.handleAddingNewKegToList} onChangingSelectedKeg={this.handleChangingSelectedKeg} currentKeg={this.state.selectedKeg} />} />
               <Route component={Error404} />
             </Switch>
           </div>

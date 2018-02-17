@@ -22,14 +22,14 @@ function Keg(props){
     return (
       <div>
         {kegInformation}
-        <EditKeg />
+        <EditKeg onChangingSelectedKeg={props.onChangingSelectedKeg} currentKeg={props.currentKeg}/>
       </div>
     );
   } else if (props.currentRouterPath === '/view-kegs') {
     return (
       <div>
         {kegInformation}
-        <SellKegButtons />
+        <SellKegButtons onPintSale={props.onPintSale} onGrowlerSale={props.onGrowlerSale} onLgGrowlerSale={props.onLgGrowlerSale}/>
       </div>
     );
   }
@@ -42,7 +42,12 @@ Keg.propTypes = {
   price: PropTypes.string,
   abv: PropTypes.string,
   pints: PropTypes.number,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onChangingSelectedKeg: PropTypes.func,
+  currentKeg: PropTypes.object,
+  onPintSale: PropTypes.func,
+  onGrowlerSale: PropTypes.func,
+  onLgGrowlerSale: PropTypes.func
 };
 
 export default Keg;
