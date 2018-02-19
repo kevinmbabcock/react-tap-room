@@ -24,7 +24,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       masterKegList: [],
-      selectedKeg = null
+      selectedKeg: null
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
     this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
@@ -37,19 +37,19 @@ class App extends React.Component {
   }
 
   handleChangingSelectedKeg(kegId) {
-    this.setState(selectedKeg: kegId)
+    this.setState({selectedKeg: kegId});
   }
 
   handlePintSale(keg) {
-    keg.pints = keg.pints -
+    alert('Pint sale button clicked');
   }
 
   handleGrowlerSale(keg) {
-    keg.pints = keg.pints -
+    alert('Growler sale button clicked');
   }
 
   handleLgGrowlerSale(keg) {
-    keg.pints = keg.pints -
+    alert('Large Growler button clicked');
   }
 
   render() {

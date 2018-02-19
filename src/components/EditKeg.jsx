@@ -21,10 +21,10 @@ function EditKeg(props){
   let _abv = null;
   let _pints = 0;
 
-  handleEditFormSubmission(event) {
+  function handleEditFormSubmission(event) {
     event.preventDefault();
-    props.onChangingSelectedKeg({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, pints: _pints.value})
-    alert(Your changes have been saved);
+    props.onChangingSelectedKeg({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, pints: _pints.value});
+    alert('Your changes have been saved');
   }
 
   return (
@@ -36,35 +36,35 @@ function EditKeg(props){
           className='form-control'
           type='text'
           id='name'
-          placeholder= props.currentKeg.name
+          placeholder= 'props.currentKeg.name'
           ref={(input) => {_name = input;}}/>
         <label><strong>Brand:</strong></label>
         <input
           className='form-control'
           type='text'
           id='brand'
-          placeholder= props.currentKeg.brand
+          placeholder= 'props.currentKeg.brand'
           ref={(input) => {_brand = input;}}/>
         <label><strong>Price:</strong></label>
         <input
           className='form-control'
           type='text'
           id='price'
-          placeholder= props.currentKeg.brand
+          placeholder= 'props.currentKeg.brand'
           ref={(input) => {_price = input;}}/>
         <label><strong>Alcohol % (ABV):</strong></label>
         <input
           className='form-control'
           type='text'
           id='abv'
-          placeholder= props.currentKeg.abv
+          placeholder= 'props.currentKeg.abv'
           ref={(input) => {_abv = input;}}/>
         <label><strong>Pints:</strong></label>
         <input
           className='form-control'
           type='number'
           id='pints'
-          placeholder= props.currentKeg.pints
+          placeholder= 'props.currentKeg.pints'
           ref={(input) => {_pints = input;}}/>
         <br />
         <button type='submit' className="btn btn-warning">Apply Changes</button>
@@ -76,6 +76,6 @@ function EditKeg(props){
 EditKeg.propTypes = {
   onChangingSelectedKeg: PropTypes.func,
   currentKeg: PropTypes.object
-}
+};
 
 export default EditKeg;

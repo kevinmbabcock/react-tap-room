@@ -16,6 +16,6 @@ function PintSold(props){
 
 PintSold.propTypes = {
   onPintSale: PropTypes.func
-}
+};
 
 export default PintSold;

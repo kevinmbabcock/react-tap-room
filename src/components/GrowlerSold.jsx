@@ -16,6 +16,6 @@ function GrowlerSold(props){
 
 GrowlerSold.propTypes = {
   onGrowlerSale: PropTypes.func
-}
+};
 
 export default GrowlerSold;

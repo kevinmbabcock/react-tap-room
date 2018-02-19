@@ -16,6 +16,6 @@ function LgGrowlerSold(props){
 
 LgGrowlerSold.propTypes = {
   onLgGrowlerSale: PropTypes.func
-}
+};
 
 export default LgGrowlerSold;

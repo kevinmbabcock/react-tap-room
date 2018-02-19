@@ -27,6 +27,6 @@ SellKegButtons.propTypes = {
   onPintSale: PropTypes.func,
   onGrowlerSale: PropTypes.func,
   onLgGrowlerSale: PropTypes.func
-}
+};
 
 export default SellKegButtons;
